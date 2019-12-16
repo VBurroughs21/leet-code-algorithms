@@ -11,11 +11,6 @@ var plusOne = function(digits) {
     var index = digits.length - 1;
 
     while (index >= 0) {
-      // if (digits[index])
-      // if (digits[index] === 9 & index == 0) {
-      //   digits[index]
-      // } 
-
       if (digits[index] == 9) {
         digits[index] = 0;
       } else {
@@ -28,15 +23,6 @@ var plusOne = function(digits) {
         digits.push(0)
       }
 
-      // if (digits[index] != 0) {
-      //   if (digits[index - 1] == 9) {
-      //     digits[index - 1] = 1;
-      //   } else {
-      //     digits[index - 1]++;
-      //   }
-      //   digits[index] = 0;
-      //   break;
-      // } 
       index--;
     }
   }
