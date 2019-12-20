@@ -5,17 +5,14 @@
  * @return {number}
  */
 var fib = function(N) {
-  if (N == 0) return 0;
-  if (N <= 2) return 1;
   let seq = [0, 1];
-  let temp;
 
-  for (var i = 3; i <= N + 1; i++) {
-    temp = seq[1];
-    seq[1] = seq[0] + seq[1];
-    seq[0] = temp;
+  for (var i = 1; i <= N + 1; i++) {
+   seq.push(seq[i] + seq[i - 1])
   };
-  return seq[1]; 
+  
+
+  return seq[N]; 
 };
 
-console.log(fib(1)); //3
+console.log(fib(3)); //1
